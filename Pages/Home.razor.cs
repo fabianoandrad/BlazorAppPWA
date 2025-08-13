@@ -26,14 +26,9 @@ namespace BlazorAppPWA.Pages
                 if (!isInstalled)
                 {
                     Console.WriteLine("App não instalado");
-                    _ = Task.Run(() => JS.InvokeVoidAsync("pwaHelper.listenForInstallPrompt", DotNetObjectReference.Create(this)));
+                    await JS.InvokeVoidAsync("pwaHelper.listenForInstallPrompt", DotNetObjectReference.Create(this));
                 }
             }
-        }
-
-        protected async override void OnInitialized()
-        {
-
         }
 
         [JSInvokable("ShowInstallPrompt")]
