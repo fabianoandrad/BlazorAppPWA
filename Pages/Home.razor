@@ -4,4 +4,6 @@
 
 <h1>Instalando Webpage PWA</h1>
 
-<MudButton onclick="(() => InstallApp())" Disabled="@visibleDialogInstallApp" Variant="Variant.Filled" Color="Color.Primary">Instalar App</MudButton>
+<button class="btn btn-primary" @onclick="InstallApp" disabled="@visibleDialogInstallApp">Instalar App</button>
+
+@* <MudButton onclick="(() => InstallApp())" Disabled="@visibleDialogInstallApp" Variant="Variant.Filled" Color="Color.Primary">Instalar App</MudButton> *@
